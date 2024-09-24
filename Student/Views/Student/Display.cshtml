@@ -1,0 +1,36 @@
+﻿@model Student.Models.Students
+
+<h2>Thông tin Học Viên</h2>
+
+<table class="table">
+    <tr>
+        <th>Mã học viên</th>
+        <td>@Model.MaHocVien</td>
+    </tr>
+    <tr>
+        <th>Họ và tên</th>
+        <td>@Model.HovaTen</td>
+    </tr>
+    <tr>
+        <th>Giới tính</th>
+        <td>@Model.GioiTinh</td>
+    </tr>
+    <tr>
+        <th>Ngày sinh</th>
+        <td>@Model.NgaySinh.ToString("dd/MM/yyyy")</td>
+    </tr>
+    <tr>
+        <th>Học phí</th>
+        <td>@Model.HocPhi</td>
+    </tr>
+    <tr>
+        <th>Hình ảnh</th>
+        <td>
+            <img src="@Url.Content("~/Image/" + @Model.ImagePath)" alt="Hình ảnh học viên" style="max-width: 150px;" />
+        </td>
+    </tr>
+    <tr>
+        <th>Ghi chú</th>
+        <td>@Model.Notes</td>
+    </tr>
+</table>
